@@ -1,0 +1,63 @@
+Q4: Il y a 3 fichier et 1 répertoire
+
+Q5: La taille du répertoire sadar n'est pas correcte. C'est parce que en soit le répertoire en contient que du texte, et la taille minimal d'un répertoire sous linux est de 4 ko.
+
+Q6: On remarque que la taille du fichier Microsoft, selon si on la determine avec la commande ls ou du est différente. C'est parce que la commande du ne fait que estimer la taille du fichier, alors que ls est plus précis.
+
+Q7: stat Microsoft
+
+Q8: ls -a.Oui il y a un fichier caché. C'est le fichier .lightbulb
+
+Q9: ls -lrt
+
+Q10: ls -lSr
+
+Q11: cat answering-machine.txt
+
+Q12: less answering-machine.txt
+
+Q13: nano answering-machine.txt
+
+Q14: on rajoute le texte
+
+Q15: on fait ctrl O, ENTRE, crtl X
+
+Q20: D'abord " cd sardar " puis " tail -n 20 sardar3.txt
+
+Q21: grep "trust" microsoft
+
+Q22: grep -r "money" *
+
+Q23: grep -i -r "money" *
+
+Q24: mv .lightbulb lightbulb
+
+Q25: pour rentrer dans le repertoire: cd sardar ;
+    pour verifier qu'on y est : ls ou pwd
+
+Q26: D'abord on creer le répertoire lab3 : mkdir lab3
+    Ensuite pour déplacer le fichier on fait : mv sardar3 lab3
+
+Q27: cd ..
+
+Q28: rm Microsoft
+
+Q29: ln -s /sardar/sardar1.txt  sardar1 ; n -s /sardar/sardar2.txt sardar2 ; n -s /sardar/sardar3.txt sardar3
+  on a des liens symbolique vers ces fichiers qui apparaissent en cyan dans le dossier courant
+
+Q30: En affichant la liste avec ls, les fichiers sont un peu difficile à identifier car ils sont en cyan, et ça ressemble au bleu des répertoires
+
+Q31: rm sardar/sardar2.txt  ;  Le lien vers sardar2.txt devient rouge
+
+Q32: Pour modifier les droit du fichier ---->> chmod a-w-x sardar/sardar1.tx
+    Pour rajouter une ligne à la fin ----->> nano sardar/sardar1.txt
+    Quand j'essaie de modifier le fichier l'diteur me dit " Permission denied "
+
+Q33: chmod a+w sardar/sardar1.txt
+    Je peux dorénavant modifier le fichier
+
+Q34: Dans le fichier père : tar -cjf lab4.tar.bz2 MU5EES05_lab_4-main
+
+Q35: Lister les fichiers et répertoire dans le .tar.bz2 sans avoir à le décompresser ---->>>>  tar -tjf lab4.tar.bz2
+
+Q36: mv lab4.tar.bz2 MU5EES05_lab_4-main
