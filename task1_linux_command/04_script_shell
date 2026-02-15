@@ -1,1 +1,4 @@
-
+QUESTION 1: Pour creer le fichier executable ( après avoir creer un répertoire dans lequel creer le fichier )-------->>> nano cmi.sh
+    Dans le fichier j'écris d'abord l'interpreteur utilisé : #!/bin/bash
+    ensuite j'écrit les commandes : ls ---->>  lister les fichiers se trouvant dans le répertoire utilisé 
+                                    pwd --->> le chemin d'accès au répertoire
