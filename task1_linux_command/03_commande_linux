@@ -42,7 +42,7 @@ Q27: cd ..
 
 Q28: rm Microsoft
 
-Q29: ln -s /sardar/sardar1.txt  sardar1 ; n -s /sardar/sardar2.txt sardar2 ; n -s /sardar/sardar3.txt sardar3
+Q29: ln -s /sardar/sardar1.txt  sardar1 ; ln -s /sardar/sardar2.txt sardar2 ; ln -s /sardar/sardar3.txt sardar3
   on a des liens symbolique vers ces fichiers qui apparaissent en cyan dans le dossier courant
 
 Q30: En affichant la liste avec ls, les fichiers sont un peu difficile à identifier car ils sont en cyan, et ça ressemble au bleu des répertoires
