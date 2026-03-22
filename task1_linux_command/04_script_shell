@@ -1,4 +1,15 @@
 QUESTION 1: Pour creer le fichier executable ( après avoir creer un répertoire dans lequel creer le fichier )-------->>> nano cmi.sh
     Dans le fichier j'écris d'abord l'interpreteur utilisé : #!/bin/bash
-    ensuite j'écrit les commandes : ls ---->>  lister les fichiers se trouvant dans le répertoire utilisé 
+    ensuite j'écrit les commandes : ls --->>  lister les fichiers se trouvant dans le répertoire utilisé 
                                     pwd --->> le chemin d'accès au répertoire
+                                    Hello_cmi="Hello Embedded Linux ----->> créer une variable contenant du texte
+                                    echo "$Hello_cmi"----->> Lire le contenu de la variable
+
+
+
+QUESTION 2: d'abord on déclare 2 variable nb1 et nb2 et on y affecte $1 et $2. Ensuite, si nb1 > nb2, alors on écrit une phrase qui le dit.
+Sinon si c'est le contraire, on l'écrit aussi. Sinon, il sont égaux et on l'écrit. Les test de supériorité, infériorité, et égalité numérique sont respectivement -gt, -lt, -eq.
+on termine nos condition avec la commande fi.
+
+
+QUESTION 3: Le script vas utiliser une boucle for...do pour parcourir les éléments de lab4. Si l'élément est un dossier, alors on l'affiche avec la commande << echo "$elt est un dossier" >>.
