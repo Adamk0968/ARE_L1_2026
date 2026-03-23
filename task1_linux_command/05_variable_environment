@@ -1,0 +1,20 @@
+QUESTION 1: On peut voir que HOME=/home/utilisateur
+
+QUESTION 2: La commande echo $PATH affiche une longue chaîne de répertoires séparés par des " : ".
+La variable PATH contient la liste des répertoires dans lesquels le shell va chercher les programmes exécutables.
+
+QUESTION 3: avec la commande nano script.sh je créer un fichier qui va contenir la commande ps aux permettant
+d'afficher tout les processus en cours.
+
+QUESTION 4: déplacer le script dans /opt : mv script.sh /opt.
+
+QUESTION 5:  La commande nécessaire pour que l’utilisateur puisse exécuter ce script à partir de n’importe quel endroit
+est : export PATH=$PATH:/opt
+
+QUESTION 6: Après avoir relancer le terminal, le script ne s'exécute plus.
+
+QUESTION 7:  le fichier script qui s’exécute automatiquement lors du démarrage d’un nouveau terminal est le fichier
+~/.bashrc. Grâce à la commande nano ~/.bashrc, je peux ecrire la commande PATH=$PATH:/opt dans le fichier.
+pour que votre script soit accessible d’une manière permanente.
+
+QUESTION 8: Le script est bien exécuté.
