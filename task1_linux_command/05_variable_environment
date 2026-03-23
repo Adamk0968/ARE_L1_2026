@@ -18,3 +18,19 @@ QUESTION 7:  le fichier script qui s’exécute automatiquement lors du démarra
 pour que votre script soit accessible d’une manière permanente.
 
 QUESTION 8: Le script est bien exécuté.
+
+
+
+
+<<SCRIPT>>
+--------------------------------------------------
+#!/bin/bash
+echo "Les processus en cours d'exécution sont :"
+ps aux
+--------------------------------------------------
+
+
+<<.bashrc (modifié)>>
+------------------------------------
+export PATH=$PATH:/opt
+------------------------------------
