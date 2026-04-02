@@ -1,0 +1,19 @@
+QUESTION 1 : Après avoir débranché l'alimentation de la carte pour réaliser des manipulations en toute sécurité, je branche le convertisseur Olimex USB-serial avec les broches 6, 8 et 10 de la carte : 
+le fil BLEU va sur la broche 6 (ligne GND), le fil VERT (ligne RX du câble) va sur la broche 8 (ligne TX de la carte), et le fil ROUGE (ligne TX du câble) va sur la broche 10 (ligne RX de la carte).
+RX (RXD) : correspond à la réception des données.
+TX (TXD) : correspond à la transmission (ou l'envoi) des données.
+
+QUESTION 3: Après avoir branché le connecteur USB vers série et regardé la sortie de la commande dmesg permettant d'afficher les messages système,
+on voit effectivement que le nouveau port série /dev/ttyUSB0 apparaît.
+
+QUESTION 4: Pour installer le programme de communication série ------>>> sudo apt install picocom
+
+QUESTION 5: Pour vérifier les permissions du périphérique ------>>> ls -l /dev/ttyUSB0
+On voit effectivement que seuls les utilisateurs root et du groupe dialout ont un accès en lecture et en écriture.
+Ajouter mon utilisateur au groupe pour avoir accès au périphérique --->> sudo adduser $USER dialout
+
+QUESTION 6: Après avoir redémarré avec la commande reboot et exécuté la commande cat /etc/group, on voit effectivement que j'appartiens bien au groupe dialout.
+
+QUESTION 7: Pour démarrer la communication série sur /dev/ttyUSB0 avec une vitesse de transmission de 115200 ------>>> picocom -b 115200 /dev/ttyUSB0
+
+QUESTION 9: Après avoir exécuté la commande raspi-config permettant de configurer la carte, on voit effectivement que l'on a accès au menu de configuration des interfaces d'entrées/sorties.
