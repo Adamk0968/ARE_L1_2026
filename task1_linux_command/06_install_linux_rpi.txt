@@ -1,0 +1,5 @@
+Pour installer linux sur la carte Rasberry pi le processus est le suivant: 1) installer rpi imager via la commande dans le terminal ---->> snap install rpi-imager
+                                                                          2) lancer le programme, choisir la carte, choisir la distribution(64 bits), et choisir la carte sd sur laquelle instaler l'image
+                                                                          3) insérer la micro sd dans la machine et configurer l'os (langue etc...)
+Quand c'est fait il faut mettre à jour la date grâce au terminal avec la commande : ---->> sudo date -s "2026-03-27 14:30:00"
+  
