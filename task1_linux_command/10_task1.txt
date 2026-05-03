@@ -1,0 +1,29 @@
+Le code suivant permet d'allumer et éteindre une led. 
+
+
+from gpiozero import LED
+from time import sleep            # Importé mais pas utilisé dans ce script
+
+# Initialisation de la LED sur la broche GPIO 17
+red = LED(17)
+
+# État initial : on "éteint" la LED (red.on() coupe le courant en logique inversée)
+red.on()
+
+# Boucle infinie pour demander la saisie en continu
+while True:
+            # Demande à l'utilisateur de saisir 0 ou 1 et convertit la réponse en nombre entier
+    a=int(input("choisis un chiffre entre 1 et 0 : "))
+    
+            # Si l'utilisateur tape 1
+    if a==1:
+                # On "allume" la LED (red.off() laisse passer le courant en logique inversée)
+        red.off()
+        # Si l'utilisateur tape 0 (ou n'importe quel autre chiffre d'ailleurs)
+    else:
+            # On "éteint" la LED
+        red.on()
+
+
+La led s'allume quand je mets led.off car les gpio sont allimenté en 3.3V au repos. led.off mets le gpio correspondant à 0V pour pouvoir creer une différence de potentiel entre l'alim,
+qui est a 3.3V, et le gpio.
