@@ -17,3 +17,38 @@ QUESTION 6: Après avoir redémarré avec la commande reboot et exécuté la com
 QUESTION 7: Pour démarrer la communication série sur /dev/ttyUSB0 avec une vitesse de transmission de 115200 ------>>> picocom -b 115200 /dev/ttyUSB0
 
 QUESTION 9: Après avoir exécuté la commande raspi-config permettant de configurer la carte, on voit effectivement que l'on a accès au menu de configuration des interfaces d'entrées/sorties.
+
+QUESTION 11: Pour identifier si l'OS arrive à détecter la nouvelle interface ------>>> ifconfig
+
+QUESTION 12: J'associe une adresse IP statique à mon PC via l'interface graphique de Network Manager :
+Adresse IPV4 --->> 192.168.0.1
+Net mask --->> 255.255.255.0
+
+QUESTION 13: Pour redémarrer l'interface ethernet ------>>> "sudo ifconfig eth0 down" puis "sudo ifconfig eth0 UP"
+
+QUESTION 14: L’adresse IP statique 192.168.0.1 a été bien affecté à la carte Raspberry PI
+
+QUESTION 15: Pour lancer l'interface textuelle de Network Manager nmtui ------>>> sudo nmtui
+Via l'interface, j'associe l'adresse IP 192.168.0.10 à la carte cible et 192.168.0.1 au domaine name server.
+
+QUESTION 16: Après avoir redémarrer l'interface ethernet, je vois grâce à la commande ifconfig que l’adresse IP de la carte est bien à jour.
+
+QUESTION 17: Pour lancer un ping à partir du PC ------>>> ping 192.168.0.10
+On voit effectivement que l'on arrive à envoyer et recevoir des paquets de données.
+
+QUESTION 18: Pour activer le serveur ssh sur la carte via le menu ------>>> sudo raspi-config
+Puis aller dans interface > SSH <enable>
+
+QUESTION 19: Pour vérifier que le serveur ssh est actif sur la carte ------>>> sudo service ssh status
+On voit effectivement que la mention "Active running" est en couleur verte
+
+QUESTION 20: Pour mettre à jour puis installer un client ssh sur le PC ------>>> sudo apt update puis sudo apt install openssh-client
+
+QUESTION 21: Pour établir une connexion SSH entre le PC et la carte ------>>> ssh groupe7are@192.168.0.10
+
+QUESTION 22: Pour transférer un fichier de test du PC à la carte après s'être déconnecté ------>>> scp
+
+QUESTION 25: Après avoir installer VNC viewer, pour activer le serveur VNC sur le Raspberry PI via le menu ------>>> "sudo raspi-config" puis j'active le serveur VNC
+
+QUESTION 26: Je me connecte à la carte à travers le client VNC.
+On voit effectivement que l'on peut accéder au Desktop graphique
