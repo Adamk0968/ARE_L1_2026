@@ -1,0 +1,44 @@
+Ces deux codes permettent d’allumer/éteindre une LED suite à un appui sur un bouton poussoir.
+
+
+
+/*POLLING*/
+
+from gpiozero import LED, Button
+
+# Initialisation de la LED (broche 17) et du Bouton (broche 18)
+led = LED(17)
+button = Button(18)
+
+# Boucle infinie pour maintenir le programme en vie (méthode lourde)
+while True:
+    # On associe l'action "allumer la led" à l'appui du bouton
+    button.when_pressed = led.off
+    
+    # On associe l'action "éteindre la led" au relâchement du bouton
+    button.when_released = led.on
+
+
+/*INTERRUPTION*/
+
+
+from gpiozero import Button, LED
+from signal import pause # Importe la fonction pour mettre le script en veille
+
+# Initialisation des composants
+led = LED(17)
+button = Button(18)
+
+# On associe les événements *une seule fois* (méthode propre)
+button.when_pressed = led.off
+button.when_released = led.on
+
+# Met le programme principal "en pause". Il ne consomme plus aucune ressource CPU
+# et attend patiemment que le bouton déclenche une interruption matérielle pour agir.
+pause()
+
+
+
+Le Polling : Le processeur vérifie l'état du bouton en boucle, sans arrêt, pour voir s'il y a un changement. Cela monopolise le processeur et gaspille énormément de ressources pour rien.
+
+L'Interruption : Le processeur dort (ou fait autre chose) et un signal matériel vient le réveiller uniquement au moment précis où le bouton est pressé. C'est immédiat et très économe en énergie
