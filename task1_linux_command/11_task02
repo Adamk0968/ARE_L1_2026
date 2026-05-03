@@ -1,0 +1,29 @@
+Ce code permet de faire clignoté une led rgb avec les  trois couleurs R, G et B
+
+
+
+from gpiozero import RGBLED
+from time import sleep
+
+# Initialisation de la LED RGB en précisant sur quelle broche GPIO chaque couleur est branchée
+led = RGBLED(red=17, green=18, blue=27)
+
+# Boucle infinie pour faire tourner les couleurs en boucle
+while True:
+    # Logique inversée : (1, 0, 1) coupe le Rouge et le Bleu, et allume le Vert
+    led.color = (1, 0, 1)  # full green
+    
+    # Met le programme en pause pendant 1 seconde
+    sleep(1)
+    
+    # (0, 1, 1) allume le Rouge, et coupe le Vert et le Bleu
+    led.color = (0, 1, 1)  # full red
+    
+    # Pause de 1 seconde
+    sleep(1)
+    
+    # (1, 1, 0) allume le Bleu, et coupe le Rouge et le Vert
+    led.color = (1, 1, 0)  # full blue
+    
+    # Nouvelle pause d'une seconde avant de recommencer la boucle depuis le début
+    sleep(1)
