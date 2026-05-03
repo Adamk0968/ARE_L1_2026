@@ -1,0 +1,11 @@
+QUESTION 1: Aller dans l'onglet Extensions :-->> Ctrl+Shift+X.
+Puis on cherche l'extension Python (par Microsoft).
+Ensuite on vérifie qu'elle est installée sur la Raspberry Pi ou on clique sur le bouton bleu "Install on SSH: [IP]" si nécessaire.
+
+QUESTION 2: Après avoir ouvert le fichier Python sur la RPi, on déplace la souris à gauche du numéro de ligne de notre code.
+Pour figer le programme à cet endroit pour l'analyser, on clique sur le petit point rouge pâle pour le rendre rouge vif.
+
+QUESTION 3: Lancer la session de débogage :-->> F5
+Une fois lancé, le terminal s'ouvre, le code s'exécute et une barre d'outils flottante apparaît en haut de l'écran.
+
+QUESTION 4: Une fois que le programme s'arrête sur notre point rouge (la ligne est surlignée en jaune), on peut piloter l'exécution à l'aide de différentes icônes.
